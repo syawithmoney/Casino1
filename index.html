@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualFlip - Jogos de Apostas</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header/Navigation -->
+        <header>
+            <nav>
+                <div class="logo">VirtualFlip</div>
+                <div class="nav-items">
+                    <span class="balance">Saldo: <span id="userBalance">1000</span> VC</span>
+                    <button id="shopButton">Loja</button>
+                    <button id="inventoryButton">Inventário</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Game Navigation -->
+        <div class="game-nav">
+            <a href="index.html" class="active">Coinflip</a>
+            <a href="upgrader.html">Upgrader</a>
+        </div>
+
+        <!-- Main Game Area -->
+        <main>
+            <div class="game-container">
+                <div class="coin-flip-area">
+                    <img id="coinImage" src="/images/coin.png" alt="Moeda" class="coin">
+                    <div class="bet-controls">
+                        <input type="number" id="betAmount" placeholder="Quantidade da aposta">
+                        <div class="bet-buttons">
+                            <button id="betHeads">Cara</button>
+                            <button id="betTails">Coroa</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-history">
+                    <h3>Histórico de Jogadas</h3>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Shop Modal -->
+        <div id="shopModal" class="modal">
+            <div class="modal-content">
+                <h2>Loja de Itens</h2>
+                <div class="shop-items" id="shopItems">
+                    <!-- Items will be added dynamically -->
+                </div>
+                <button class="close-modal">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Inventory Modal -->
+        <div id="inventoryModal" class="modal">
+            <div class="modal-content">
+                <h2>Seu Inventário</h2>
+                <div class="inventory-items" id="inventoryItems">
+                    <!-- Inventory items will be added dynamically -->
+                </div>
+                <button class="close-modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
